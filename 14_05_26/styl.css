@@ -1,0 +1,48 @@
+*{
+    font-family:  Trebuchet MS,sans-serif;
+}
+body{
+    background-color: BlanchedAlmond;
+    text-align: center;
+}
+aside{
+    width: 20%;
+    float: left;
+}
+aside img{
+    width: 100%;
+}
+main{
+    width: 80%;
+    float: left;
+}
+nav{
+    text-align: left;
+    margin-left: 10%;
+}
+section{
+    background-color: Salmon;
+    margin-left: 10%;
+    padding: 10px;
+    height: 250px;
+    display: none;
+}
+#sect1{
+    display: block;
+}
+button{
+    width: 26%;
+    color: white;
+    border: none;
+    font-size: 200%;
+    background-color: Crimson;
+}
+#btn1{
+    background-color: salmon;
+}
+.wzory{
+    width: 70px;
+    margin: 5px;
+    border-radius: 100%;
+}
+
