@@ -1,0 +1,16 @@
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\obj\Debug\WpfApp_audio_payer.csproj.AssemblyReference.cache
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\obj\Debug\MainWindow.g.cs
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\obj\Debug\App.g.cs
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\obj\Debug\WpfApp_audio_payer_MarkupCompile.cache
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\obj\Debug\WpfApp_audio_payer_MarkupCompile.lref
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\bin\Debug\WpfApp_audio_payer.exe.config
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\bin\Debug\WpfApp_audio_payer.exe
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\bin\Debug\WpfApp_audio_payer.pdb
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\obj\Debug\MainWindow.baml
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\obj\Debug\WpfApp_audio_payer.g.resources
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\obj\Debug\WpfApp_audio_payer.Properties.Resources.resources
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\obj\Debug\WpfApp_audio_payer.csproj.GenerateResource.cache
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\obj\Debug\WpfApp_audio_payer.csproj.CoreCompileInputs.cache
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\obj\Debug\WpfApp_audio_payer.exe
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\obj\Debug\WpfApp_audio_payer.pdb
+C:\Ruslan\School\HomeWork\desktop aplications\WpfApp_audio_payer\WpfApp_audio_payer\obj\Debug\WpfApp_audio_payer.exe.config
