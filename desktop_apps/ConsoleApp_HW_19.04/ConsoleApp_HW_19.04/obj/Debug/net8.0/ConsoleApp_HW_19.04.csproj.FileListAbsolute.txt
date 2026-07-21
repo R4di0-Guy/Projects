@@ -1,0 +1,14 @@
+C:\Ruslan\School\HomeWork\desktop aplications\ConsoleApp_HW_19.04\ConsoleApp_HW_19.04\bin\Debug\net8.0\ConsoleApp_HW_19.04.exe
+C:\Ruslan\School\HomeWork\desktop aplications\ConsoleApp_HW_19.04\ConsoleApp_HW_19.04\bin\Debug\net8.0\ConsoleApp_HW_19.04.deps.json
+C:\Ruslan\School\HomeWork\desktop aplications\ConsoleApp_HW_19.04\ConsoleApp_HW_19.04\bin\Debug\net8.0\ConsoleApp_HW_19.04.runtimeconfig.json
+C:\Ruslan\School\HomeWork\desktop aplications\ConsoleApp_HW_19.04\ConsoleApp_HW_19.04\bin\Debug\net8.0\ConsoleApp_HW_19.04.dll
+C:\Ruslan\School\HomeWork\desktop aplications\ConsoleApp_HW_19.04\ConsoleApp_HW_19.04\bin\Debug\net8.0\ConsoleApp_HW_19.04.pdb
+C:\Ruslan\School\HomeWork\desktop aplications\ConsoleApp_HW_19.04\ConsoleApp_HW_19.04\obj\Debug\net8.0\ConsoleApp_HW_19.04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Ruslan\School\HomeWork\desktop aplications\ConsoleApp_HW_19.04\ConsoleApp_HW_19.04\obj\Debug\net8.0\ConsoleApp_HW_19.04.AssemblyInfoInputs.cache
+C:\Ruslan\School\HomeWork\desktop aplications\ConsoleApp_HW_19.04\ConsoleApp_HW_19.04\obj\Debug\net8.0\ConsoleApp_HW_19.04.AssemblyInfo.cs
+C:\Ruslan\School\HomeWork\desktop aplications\ConsoleApp_HW_19.04\ConsoleApp_HW_19.04\obj\Debug\net8.0\ConsoleApp_HW_19.04.csproj.CoreCompileInputs.cache
+C:\Ruslan\School\HomeWork\desktop aplications\ConsoleApp_HW_19.04\ConsoleApp_HW_19.04\obj\Debug\net8.0\ConsoleApp_HW_19.04.dll
+C:\Ruslan\School\HomeWork\desktop aplications\ConsoleApp_HW_19.04\ConsoleApp_HW_19.04\obj\Debug\net8.0\refint\ConsoleApp_HW_19.04.dll
+C:\Ruslan\School\HomeWork\desktop aplications\ConsoleApp_HW_19.04\ConsoleApp_HW_19.04\obj\Debug\net8.0\ConsoleApp_HW_19.04.pdb
+C:\Ruslan\School\HomeWork\desktop aplications\ConsoleApp_HW_19.04\ConsoleApp_HW_19.04\obj\Debug\net8.0\ConsoleApp_HW_19.04.genruntimeconfig.cache
+C:\Ruslan\School\HomeWork\desktop aplications\ConsoleApp_HW_19.04\ConsoleApp_HW_19.04\obj\Debug\net8.0\ref\ConsoleApp_HW_19.04.dll
