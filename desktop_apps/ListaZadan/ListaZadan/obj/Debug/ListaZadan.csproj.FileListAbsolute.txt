@@ -1,0 +1,11 @@
+C:\Ruslan\School\HomeWork\desktop aplications\ListaZadan\ListaZadan\bin\Debug\ListaZadan.exe.config
+C:\Ruslan\School\HomeWork\desktop aplications\ListaZadan\ListaZadan\bin\Debug\ListaZadan.exe
+C:\Ruslan\School\HomeWork\desktop aplications\ListaZadan\ListaZadan\bin\Debug\ListaZadan.pdb
+C:\Ruslan\School\HomeWork\desktop aplications\ListaZadan\ListaZadan\obj\Debug\ListaZadan.csproj.AssemblyReference.cache
+C:\Ruslan\School\HomeWork\desktop aplications\ListaZadan\ListaZadan\obj\Debug\ListaZadan.Form1.resources
+C:\Ruslan\School\HomeWork\desktop aplications\ListaZadan\ListaZadan\obj\Debug\ListaZadan.Properties.Resources.resources
+C:\Ruslan\School\HomeWork\desktop aplications\ListaZadan\ListaZadan\obj\Debug\ListaZadan.csproj.GenerateResource.cache
+C:\Ruslan\School\HomeWork\desktop aplications\ListaZadan\ListaZadan\obj\Debug\ListaZadan.csproj.CoreCompileInputs.cache
+C:\Ruslan\School\HomeWork\desktop aplications\ListaZadan\ListaZadan\obj\Debug\ListaZadan.exe
+C:\Ruslan\School\HomeWork\desktop aplications\ListaZadan\ListaZadan\obj\Debug\ListaZadan.pdb
+C:\Ruslan\School\HomeWork\desktop aplications\ListaZadan\ListaZadan\obj\Debug\ListaZadan.exe.config
