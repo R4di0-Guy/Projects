@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery pokaz zdjęć</title>
+
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+var i=1
+
+$(function(){
+	$("h2").append('<em></em>')
+	$(".galeria a").click(function(){
+		var do_zdj = $(this).attr("href");
+		var do_tyt = $(this).attr("title");
+		$("#zdjecie_d").attr({src: do_zdj, alt: 'do tyt'});
+		$("h2 em").html(" (" + do_tyt + ")"); return false;
+	});
+});
+
+$(function(){
+	$('#gt').click(function(){
+		if(i==5){
+		i=1;
+		var do_zdj = 'img/zdjecie'+i+'.jpg'
+		$("#zdjecie_d").attr({src: do_zdj, alt: 'do tyt'});
+		}
+		else{
+		i++
+		var do_zdj = 'img/zdjecie'+i+'.jpg'
+		$("#zdjecie_d").attr({src: do_zdj, alt: 'do tyt'});
+		}
+	})
+})
+
+$(function(){
+	$('#lt').click(function(){
+		if(i==1){
+		i=5;
+		var do_zdj = 'img/zdjecie'+i+'.jpg'
+		$("#zdjecie_d").attr({src: do_zdj, alt: 'do tyt'});
+		
+		}
+		else{
+		i--;
+		var do_zdj = 'img/zdjecie'+i+'.jpg'
+		$("#zdjecie_d").attr({src: do_zdj, alt: 'do tyt'});}
+	})
+})
+
+</script>
+
+<style type="text/css">
+body {
+	margin: 20px auto;
+	padding: 0;
+	width: 580px;
+	font: 75%/120% Arial, Helvetica, sans-serif;
+}
+
+h2 {
+	font: bold 190%/100% Arial, Helvetica, sans-serif;
+	margin: 0 0.2em;
+}
+
+h2 em {
+	font: normal 80%/100% Arial, Helvetica, sans-serif;
+	color: #999999;
+}
+#main{
+	width: 620px;
+	margin: 10px auto;
+}
+button{float: left;height: 400px; width: 20px;}
+
+#zdjecie_d {
+	border: solid 1px #ccc;
+	width: 550px;
+	height: 400px;
+	padding: 5px;
+	float: left;
+}
+.galeria{clear: both;}
+.galeria img {
+	border: solid 1px #ccc;
+	width: 100px;
+	height: 100px;
+	padding: 4px;
+}
+
+.galeria img:hover {
+	border-color: #FF9900;
+}
+
+</style>
+</head>
+<body>
+
+<center><h2> Pokaz zdjęć</h2></center>
+<p id="main"><button id="lt">&lt;</button><img id="zdjecie_d" src="img/zdjecie1.jpg" alt="Duze zdjecie" /><button id="gt">&gt;</button></p>
+<p class="galeria">
+	<a href="img/zdjecie1.jpg" title="Zdjecie 1"><img src="img/zdjecie1_small.jpg" /></a>
+	<a href="img/zdjecie2.jpg" title="Zdjecie 2"><img src="img/zdjecie2_small.jpg" /></a>
+	<a href="img/zdjecie3.jpg" title="Zdjecie 3"><img src="img/zdjecie3_small.jpg" /></a>
+	<a href="img/zdjecie4.jpg" title="Zdjecie 4"><img src="img/zdjecie4_small.jpg" /></a>
+	<a href="img/zdjecie5.jpg" title="Zdjecie 5"><img src="img/zdjecie5_small.jpg" /></a>
+	
+</p>
+
+</body>
+</html>

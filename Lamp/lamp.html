@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="lamp.png">
+    <title>Lamp</title>
+    <style>
+        html, body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body{background-color: black;}
+        #lights{
+            height: 80%;
+            background: white;
+            border: 10px black solid;
+            opacity: 0;
+        }
+        #buttons{
+            opacity: 0.6;
+            height:14%;
+            width: 50%;
+            margin: 0px auto;
+            padding: 10px; 
+            background-color: rgb(38, 50, 50);
+            border-radius:10px;
+        }
+        #button{margin-left: 20%; height: 100%; width: 30%; float: left; border-radius: 10px; background-color: darkslategrey; color: white;}
+        #button:hover{background-color: rgb(40, 65, 65); color: rgb(217, 217, 217);}
+        /*button:{background-color: rgb(33, 53, 53);}*/
+        #rang{margin-left: 10%; background-color: darkslategray; float: left;height: 99%; border-radius: 10px; width: 30%; border: 2px black solid;}
+        #rang:hover{background-color: rgb(40, 65, 65);}
+        #rg{margin-top: 15%;width: 98%;}
+
+
+    </style>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        var l=0
+        $(function(){
+            $('button').click(function(){
+
+                if(l==0){
+                $('#lights').animate({
+                    opacity: '1'
+                });
+                l=1;
+                document.getElementById('rg').value='100'
+            }
+
+                else{
+                    $('#lights').animate({
+                    opacity: '0'
+                });
+                l=0;
+                document.getElementById('rg').value='0'
+            }
+        
+            })
+        })
+
+        $(function(){
+        $('#rg').change(function(){
+            va=parseInt(document.getElementById('rg').value)/100
+            $('#lights').animate({
+                    opacity: va
+                });
+            if(va==1){l=1}
+        })
+    })
+
+    </script>
+</head>
+<body>
+    <div id="lights"></div>
+    <div id="buttons"><button id="button">Turn On/Off</button><div id="rang"><input id="rg" type="range" value="0"></div></div>
+</body>
+</html>
