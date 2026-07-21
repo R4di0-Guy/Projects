@@ -1,0 +1,43 @@
+*{
+    font-family: Century,serif;
+    text-align: center;
+}
+
+header,footer{
+   background-color: Indigo; 
+   color: white;
+   font-style: italic;
+   padding: 2px;
+}
+div{
+    width: 50%;
+    height: 470px;
+    background-color: #fff;
+}
+img{
+    padding: 3px;
+    margin: 10px;
+    border: 2px dashed slateblue;
+}
+a{
+    color: white;
+}
+button{
+    background-color: slateblue;
+    color: white;
+    border: none;
+    margin: 10px 20px;
+    padding-top: 10px;
+}
+button:hover{
+    background-color: indigo;
+}
+input[type='range']{
+    width: 100%;
+}
+
+img{
+    width:500px;
+    filter: none;
+}
+div{float: left;}

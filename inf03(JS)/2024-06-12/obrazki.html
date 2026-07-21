@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+    <div>
+        <img id="img1" src="minecraft-the-wild.jpg" alt="pszczoła na fioletowym kwiatku">
+        <br>
+        <input type="radio" name="radio" value="blur">Blur<br>
+        <input type="radio" name="radio" value="sepia">Stepia<br>
+        <input type="radio" name="radio" value="invert">Negatyw<br>
+        <button id="btn1">Zastosuj</button>
+    </div>
+    <div>
+        <img id="img2" src="minecraft-the-wild.jpg" alt="drzewo pomarańczy">
+        <br>
+        <button id="btn_kolorowy">Kolorowy</button>
+        <button id="btn_carno_bialy">Czarno-biały</button>
+    </div>
+    <div>
+        <img id="img3" src="minecraft-the-wild.jpg" alt="Kosz pełen owoców">
+        <br>
+        <input type="range" name="range1" min="0" max="100" value="100"><br>
+        <button id="btn3">Zastosuj</button>
+    </div>
+    <div>
+        <img id="img4" src="minecraft-the-wild.jpg" alt="Żółw w wodzie">
+        <br>
+        <input type="range" name="range2" min="0" max="250"><br>
+        <button id="btn4">Zastosuj</button>
+    </div>
+    <footer>
+        <p><a target="_blank" href="http://www.css.com/">Zobacz inne efekty obrazu</a></p>
+        <p>Stronę wykonał: R</p>
+    </footer>
+    <script>
+        document.querySelector("#btn1").addEventListener("click",()=>{
+            effect1=document.querySelector("input[name='radio']:checked").value;
+            if(effect1=="blur"){
+                rand=Math.floor(Math.random() * 8)+4;
+                console.log(rand);
+                new_attribute=effect1+"("+rand+"px)";
+            }
+            else{
+                new_attribute=effect1+"(100%)";
+            }
+            document.querySelector("#img1").style.filter=new_attribute;
+        })
+        
+        document.querySelector("#btn_kolorowy").addEventListener("click",()=>{
+            document.querySelector("#img2").style.filter='none';
+        })
+        document.querySelector("#btn_carno_bialy").addEventListener("click",()=>{
+            document.querySelector("#img2").style.filter="grayscale(100%)";
+        })
+
+        document.querySelector("#btn3").addEventListener("click",()=>{
+           range1=document.querySelector("input[name='range1']").value;
+           document.querySelector("#img3").style.filter="opacity("+range1+"%)";
+        })
+
+        document.querySelector("#btn4").addEventListener("click",()=>{
+           range2=document.querySelector("input[name='range2']").value;
+           document.querySelector("#img4").style.filter="brightness("+range2+"%)";
+        })
+    </script>
+</body>
+</html>

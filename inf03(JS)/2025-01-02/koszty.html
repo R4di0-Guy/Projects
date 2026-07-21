@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Montaż paneli podłogowych</title>
+    <link rel="stylesheet" href="slyle.css">
+</head>
+<body>
+    <header>
+        <img src="montaz_paneli.png" alt="firma usługowa">
+    </header>
+
+    <menu>
+        <a href="index.html">Strona Główna</a>
+        <a href="oferta.html">Oferta</a>
+        <a href="koszty.html">Kalkulator kosztów</a>
+    </menu>
+
+    <main>
+        <h1>Kalkulator kosztów montażu</h1>
+        <label for="szerokosc">Szerokość pomieszczenia [m]:</label>
+        <input type="number" name="szerokosc">
+        <label for="dlugosc">Długość pomieszczenia [m]:</label>
+        <input type="number" name="dlugosc">
+
+        <p>Typ panelu</p>
+        <input type="radio" name="typ" value="laminowane">
+        <label for="laminowane">Panele laminowane</label><br>
+        <input type="radio" name="typ" value="winylowe">
+        <label for="winylowe">Panele winylowe</label><br>
+        <input type="radio" name="typ" value="deska">
+        <label for="deska">Deska podłogowa</label><br>
+
+        <button>Oblicz</button>
+        <p id="wynik"></p>
+    </main>
+
+    <footer>
+        <h5>Autor strony: R</h5>
+    </footer>
+    <script>
+        document.querySelector("button").addEventListener("click",()=>{
+            szerokosc=document.querySelector("input[name='szerokosc']").value;
+            dlugosc=document.querySelector("input[name='dlugosc']").value;
+
+            typ=document.querySelector("input[name='typ']:checked").value;
+            if(typ=='laminowane'){
+                koszt_na_m=12;
+            }
+            else{
+                if(typ=='winylowe'){
+                    koszt_na_m=14;
+                }
+                else{
+                    koszt_na_m=18;
+                }
+            }
+
+            if(szerokosc && dlugosc){
+                pole=szerokosc*dlugosc;
+                koszt=pole*koszt_na_m;
+                document.querySelector("#wynik").textContent='Pole powierzchni pomieszczenia: '+pole+', koszt montażu '+koszt;
+            }
+        });
+    </script>
+</body>
+</html>

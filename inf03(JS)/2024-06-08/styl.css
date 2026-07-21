@@ -1,0 +1,61 @@
+*{font-family: Cambria;}
+body{background-color: Linen;}
+#boczny, header,footer{
+    background-color: SteelBlue;
+    color: white;
+    text-align: center;
+}
+#boczny{
+    width: 25%;
+    height: 510px;
+    margin: 0 1%;
+    box-shadow: 4px 4px 5px dimgray;
+}
+header,main,#postep{
+    float: right;
+}
+#boczny{float: left;}
+footer{clear: both;}
+header{
+    width: 73%;
+    height: 80px;
+}
+main{
+    width: 73%;
+    height: 400px;
+}
+button{
+    background-color: steelblue;
+    color: white;
+    width: 20%;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 130%;
+    border: none;
+}
+button:hover{
+    background-color: Navy;
+}
+#main1,#main2,#main3{
+    background-color: LightBlue;
+    margin-right: 80px;
+    padding: 10px;
+    display: none;
+}
+#main1{
+    display: block;
+}
+#postep{
+    background-color: LightGrey;
+    width: 73%;
+    margin-bottom: 10px;
+}
+section{
+    background-color: navy;
+    width: 4%;
+    height: 30px;
+}
+table{
+    width: 100%;
+    border: dotted 1px navy;
+}

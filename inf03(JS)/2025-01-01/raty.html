@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kursy komputerowe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="baner.png" alt="kursy komputerowe">
+    </header>
+
+    <menu>
+        <a href="index.html">Strona główna</a>
+        <a href="raty.html">Koszt rat</a>
+        <a href="nope">Nasz partner</a>
+    </menu>
+
+    <main>
+        <h3>Oblicz miesięczną ratę</h3>
+        <input class="kontrolki" type="checkbox" name="kurs_react">Kurs React.js<br>
+        <input class="kontrolki" type="checkbox" name="kurs_js">Kurs JavaScript<br>
+        <label for="liczba_rat">Liczba rat:</label><input type="number" name="liczba_rat"><br>
+        <select class="kontrolki" name="miasto">
+            <option value="Warszawa">Warszawa</option>
+            <option value="Katowice">Katowice</option>
+            <option value="Gdansk">Gdańsk</option>
+        </select><br>
+        <button class="kontrolki">Oblicz</button><br>
+        <p id="wynik"></p>
+        
+    </main>
+
+    <footer>
+        <p>Autor strony: R</p>
+    </footer>
+    <script>
+        const cena_react=5000;
+        const cena_js=3000;
+        document.querySelector("button").addEventListener("click",()=>{
+            let kwota=0;
+            js=document.querySelector("input[name='kurs_js']");
+            react=document.querySelector("input[name='kurs_react']");
+            liczba_rat=document.querySelector("input[name='liczba_rat']").value;
+            miasto=document.querySelector("select").value;
+            if(miasto=="Gdansk"){miasto="Gdańsk"}
+
+            if(js.checked){
+                kwota+=cena_js
+            }
+            if(react.checked){
+                kwota+=cena_react
+            }
+
+            document.querySelector("#wynik").textContent="Kurs odbędzie się w "+miasto+
+            ". Koszt całkowity: "+kwota+
+            " zł. Płacisz "+liczba_rat+
+            " rat po "+(kwota/liczba_rat)+" zł";
+
+        });
+    </script>
+</body>
+</html>

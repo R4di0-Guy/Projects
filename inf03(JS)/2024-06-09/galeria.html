@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Biuro turystyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h1>Zwiedzamy Polskę</h1>
+    </header>
+
+    <div class="bloki" id="lewy"><button>&lt;</button></div>
+    <div class="bloki" id="środkowy">
+        <img src="1.jpg" alt="Aktywne zdjęcie">
+    </div>
+    <div class="bloki" id="prawy"><button>&gt;</button></div>
+
+    <div id="miniatury">
+        <img src="1.jpg" alt="Gdańsk">
+        <img src="2.jpg" alt="Kraków">
+        <img src="3.jpg" alt="Niedzica">
+        <img src="4.jpg" alt="Pieniny">
+        <img src="5.jpg" alt="Szklarska ">
+        <img src="6.jpg" alt="Poręba">
+        <img src="7.jpg" alt="Tatry">
+    </div>
+    <footer>
+        <h3>Autorem galerii jest:</h3>
+        <p>R</p>
+        <a target="_blank" href="http://pixabay.com">Więcej zdjęć</a>
+    </footer>
+    <script>
+        let id_zdjecia=1;
+        document.querySelector("#lewy button").addEventListener('click',()=>{
+            id_zdjecia-=1;
+            if(id_zdjecia==0){
+                id_zdjecia=7
+            }
+            new_src=id_zdjecia+'.jpg'
+            document.querySelector('#środkowy img').src=new_src;
+        })
+
+        document.querySelector("#prawy button").addEventListener('click',()=>{
+            id_zdjecia+=1;
+            if(id_zdjecia==8){
+                id_zdjecia=1
+            }
+            new_src=id_zdjecia+'.jpg'
+            document.querySelector('#środkowy img').src=new_src;
+        })
+    </script>
+</body>
+</html>

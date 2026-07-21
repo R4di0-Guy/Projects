@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Sklep - rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <div id="boczny">
+        <img src="obraz.png" alt="promocje">
+        <h2>Sprawdź promocje</h2>
+        <table>
+            <tr>
+                <th>co?</th>
+                <th>ile tanej?</th>
+            </tr>
+            <tr>
+                <td>ubrania</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>buty</td>
+                <td>25%</td>
+            </tr>
+        </table>
+    </div>
+
+    <header>
+        <h1>Zarejestruj się w sklepie</h1>
+    </header>
+
+    <main>
+        <button id="btn_klient">Klient</button>
+        <button id="btn_adres">Adres</button>
+        <button id="btn_kontakt">Kontakt</button>
+
+        <div id="main1">
+            <p>Imię</p>
+            <input name="imie" type="text">
+            <p>Nazwisko</p>
+            <input name="nazwisko" type="text">
+            <p>Data urodzenia</p>
+            <input name="data_ur" type="date">
+        </div>
+
+        <div id="main2">
+            <p>Ulica</p>
+            <input name="ulica" type="text">
+            <p>Numer</p>
+            <input name="numer" type="number">
+            <p>Miasto</p>
+            <input name="miasto" type="text">
+        </div>
+
+        <div id="main3">
+            <p>Numer komórkowy</p>
+            <input name="numer_komorkowy" type="tel"><br>
+            <input name="rodo" type="checkbox"><label for="rodo"> Akceptuję RODO</label><br>
+            <button id="zatwerdz">Zatwierdź dane</button>
+        </div>
+    </main>
+
+    <div id="postep">
+        <section></section>
+    </div>
+
+    <footer>
+        <h4>Rejestrację do sklepu wykonał: R</h4>
+    </footer>
+    
+    <script>
+        document.querySelector("#btn_klient").addEventListener("click",()=>{
+            document.querySelectorAll("#main1,#main2,#main3").forEach((element)=>{
+                element.style.display="none";
+            })
+            document.querySelector("#main1").style.display="block";
+        });
+
+        document.querySelector("#btn_adres").addEventListener("click",()=>{
+            document.querySelectorAll("#main1,#main2,#main3").forEach((element)=>{
+                element.style.display="none";
+            })
+            document.querySelector("#main2").style.display="block";
+        });
+
+        document.querySelector("#btn_kontakt").addEventListener("click",()=>{
+            document.querySelectorAll("#main1,#main2,#main3").forEach((element)=>{
+                element.style.display="none";
+            })
+            document.querySelector("#main3").style.display="block";
+        });
+
+        wartosc_postepu=0
+        document.querySelectorAll('input[type="text"], input[type="date"], input[type="number"], input[type="tel"]').forEach((input)=>{
+            input.addEventListener("blur",()=>{
+                wartosc_postepu+=12;
+                if(wartosc_postepu>100){
+                    wartosc_postepu=100;
+                }
+                document.querySelector("section").style.width=wartosc_postepu+"%"
+                })
+        })
+
+        document.querySelector("#zatwerdz").addEventListener("click",()=>{
+            let imie=document.querySelector("input[name='imie']").value;
+            let nazwisko=document.querySelector("input[name='nazwisko']").value;
+            let data_ur=document.querySelector("input[name='data_ur']").value;
+            let ulica=document.querySelector("input[name='ulica']").value;
+            let numer=document.querySelector("input[name='numer']").value;
+            let miasto=document.querySelector("input[name='miasto']").value;
+            let numer_komorkowy=document.querySelector("input[name='miasto']").value;
+            let rodo=document.querySelector("input[name='miasto']").checked ? 'On' : 'Of';;
+            console.log(imie+", "+nazwisko+", "+data_ur+", "+ulica+", "+numer+", "+miasto+", "+numer_komorkowy+", "+rodo+", ");
+        });
+    </script>
+</body>
+</html>

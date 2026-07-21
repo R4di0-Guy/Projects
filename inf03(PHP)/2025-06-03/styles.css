@@ -1,0 +1,47 @@
+*{
+    font-family: Roboto,sans-serif;
+    text-align: center;
+}
+body{
+    background-color: lightcyan;
+}
+header,footer{
+    background-color: steelblue;
+    color: white;
+    padding: 10px;
+}
+article{
+    padding-top: 40px;
+    margin: 1%;
+}
+@media(min-width:800px) {
+    article{float: left;width: 30%;}
+}
+@media(max-width:800px){
+   article{width: 98%;} 
+}
+#pierwszy{
+    background-color: DodgerBlue;
+}
+#drugi{
+    background-color: LimeGreen;
+}
+#trzeci{
+    background-color: DarkOrchid;
+}
+img{
+    width: 70%;
+}
+p{
+    margin: 20px;
+}
+table{
+    margin: auto;
+    width: 70%;
+    border: solid 1px steelblue;
+}
+tr:hover{
+    background-color: steelblue;
+    color: white;
+}
+footer{clear: both;}

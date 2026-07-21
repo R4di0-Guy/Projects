@@ -1,0 +1,52 @@
+*{
+    font-family: Georgia;
+    color: white;
+}
+header,footer{
+    background-color: maroon;
+    text-align: center;
+    padding: 2px;
+}
+.bloki{
+    background-color: LightSalmon;
+    height: 527px;
+    float: left;
+}
+#lewy,#prawy{
+    width: 15%;
+}
+#środkowy{
+    width: 70%;
+}
+#miniatury{
+    background-color: maroon;
+    height: 70px;
+}
+button{
+    background-color: lightsalmon;
+    color: maroon;
+    border: none;
+    display: block;
+    margin: auto;
+    padding-top: 210px;
+    font-size: 400%;
+}
+#miniatury img{
+    height: 70px;
+    animation-name: miniatury;
+    animation-duration: 4s;
+}
+@keyframes miniatury{
+    from{padding: 50px;}
+    to{padding: 0px;}
+}
+#środkowy img{
+    display: block;
+    margin: auto;
+    padding-top: 45px;
+    transition: transform 5s ease;
+}
+#środkowy img:hover{
+    transform: scale(1.2);
+}
+footer,#miniatury{clear: both;}

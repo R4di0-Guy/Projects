@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Planer zadań</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <aside>
+        <img src="obraz.jpg" alt="notatki">
+    </aside>
+    <header>
+        <h2>Moje zadania</h2>
+    </header>
+    <nav>
+        <input type="text" placeholder="„Dodaj zadanie...">
+        <button>Dodaj</button>
+    </nav>
+    <main>
+        <ul>
+            <li>Wyprowadzić psa <button class="wykonane_btn">Wykonane</button></li>
+            <li>Gimnastyka <button class="wykonane_btn">Wykonane</button></li>
+            <li>Zakupy <button class="wykonane_btn">Wykonane</button></li>
+            <li>Spacer z kumplem <button class="wykonane_btn">Wykonane</button></li>
+            <li>Odrabianie lekcji z modszą siostrą <button class="wykonane_btn">Wykonane</button></li>
+            <li>Projekt na geografię <button class="wykonane_btn">Wykonane</button></li>
+        </ul>
+    </main>
+    <footer>
+        <h3>Notatki:R</h3>
+    </footer>
+    <script>
+            let ilosc_wierszy=6;
+            document.querySelectorAll(".wykonane_btn").forEach((przycisk)=>
+            przycisk.addEventListener("click",oznaczJakoWykonane));
+
+            function oznaczJakoWykonane(event) {
+                elementListy = event.currentTarget.closest('li');
+                if (elementListy) {
+                    elementListy.style.textDecoration = 'line-through';		
+                }
+            }
+
+            //skrypt2
+            document.querySelector("nav button").addEventListener("click",()=>{
+                pobrany_text=document.querySelector("input").value;
+                document.querySelector("ul").innerHTML+=`
+                <li>`+pobrany_text+`<button class="wykonane_btn">Wykonane</button></li>
+                `;
+                document.querySelectorAll(".wykonane_btn").forEach((przycisk)=>
+                przycisk.addEventListener("click",oznaczJakoWykonane));
+            })
+    </script>
+</body>
+</html>
