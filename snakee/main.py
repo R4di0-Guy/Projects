@@ -3,7 +3,7 @@ import random
 
 GAME_WIDTH=500
 GAME_HEIGHT=500
-SPEED=100
+SPEED=150
 SPACE_SIZE=25
 BODY_PARTS=3
 SNAKE_COLOUR="#00FF0A"
@@ -32,6 +32,14 @@ class Food():
 
         canvas.create_oval(x,y,x+SPACE_SIZE,y+SPACE_SIZE,fill=FOOD_COLOUR,tag="food")
 
+def speed_boost():
+    global SPEED
+    SPEED-=10
+    print(SPEED)
+    if SPEED==70:
+        global is_not_max_level
+        is_not_max_level=False
+
 def next_turn(snake,food):
     x,y=snake.coordinates[0]
 
@@ -55,6 +63,17 @@ def next_turn(snake,food):
         score+=1
 
         label.config(text="Score:{}".format(score))
+        if (is_not_max_level):
+            global multiplier
+            if score<20:
+                if score%5==0:
+                    multiplier+=1
+                    speed_boost()
+            else:
+                if score%10==0:
+                    multiplier+=1
+                    speed_boost()
+            multipl.config(text="Multiplier:{}".format(multiplier)+"x")
 
         canvas.delete("food")
         food=Food()
@@ -106,17 +125,61 @@ def game_over():
     canvas.delete(ALL)
 
     canvas.create_text(canvas.winfo_width()/2,canvas.winfo_height()/2,font=("consolas",70),text="GAME OVER", fill="red",tag="gameover")
+    canvas.create_text(canvas.winfo_width()/2,canvas.winfo_height()/1.5,font=("consolas",20),text="Press 'SPACE' to retry", fill="red",tag="gameover")
+
+def retry():
+    global is_end
+    print(is_end)
+    if is_end:
+        print("retry")
+        global score
+        global high_score
+        if score>high_score:
+            high_score=score
+
+        canvas.delete(ALL)
+        
+        score=0
+        multiplier=1
+        is_not_max_level=True
+        direction="down"
+        is_end=False
+        global SPEED
+        SPEED==150
+
+        label.config(text="Score:{}".format(score))
+        multipl.config(text="Multiplier:{}".format(multiplier)+"x")
+        high_s.config(text="High Score:{}".format(high_score))
+
+        x=int((screen_width/2)-(window_width/2))
+        y=int((screen_height/2)-(window_height/2))
+
+        snake=Snake()
+        food=Food()
+
+        next_turn(snake,food)
+        window.mainloop()
+
 
 if __name__=="__main__":
     window=Tk()
     window.title("SnakeGame")
     window.resizable(False,False)
 
+    high_score=0
     score=0
+    multiplier=1
+    is_not_max_level=True
     direction="down"
+    is_end=False
+    high_s=Label(window, text="High Score:{}".format(high_score), font=('consolas',20))
+    high_s.pack()
 
     label=Label(window, text="Score:{}".format(score), font=('consolas',40))
     label.pack()
+
+    multipl=Label(window, text="Multiplier:{}".format(multiplier)+"x", font=('consolas',20))
+    multipl.pack()
 
     canvas=Canvas(window,bg=BACKGROUND_COLOUR,height=GAME_HEIGHT,width=GAME_WIDTH)
     canvas.pack()
@@ -135,6 +198,7 @@ if __name__=="__main__":
     window.bind("<Right>",lambda event:change_direction("right"))
     window.bind("<Up>",lambda event:change_direction("up"))
     window.bind("<Down>",lambda event:change_direction("down"))
+    window.bind("<space>",lambda event:retry())
 
 
     window.geometry(f"{window_width}x{window_height}+{x}+{y}")
