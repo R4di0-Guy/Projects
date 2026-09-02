@@ -126,6 +126,8 @@ def game_over():
 
     canvas.create_text(canvas.winfo_width()/2,canvas.winfo_height()/2,font=("consolas",70),text="GAME OVER", fill="red",tag="gameover")
     canvas.create_text(canvas.winfo_width()/2,canvas.winfo_height()/1.5,font=("consolas",20),text="Press 'SPACE' to retry", fill="red",tag="gameover")
+    global is_end
+    is_end=True
 
 def retry():
     global is_end
@@ -140,25 +142,25 @@ def retry():
         canvas.delete(ALL)
         
         score=0
+        global multiplier
         multiplier=1
+        is_end=False
+        global direction
+        global is_not_max_level
         is_not_max_level=True
         direction="down"
-        is_end=False
         global SPEED
-        SPEED==150
+        SPEED=150
 
         label.config(text="Score:{}".format(score))
         multipl.config(text="Multiplier:{}".format(multiplier)+"x")
         high_s.config(text="High Score:{}".format(high_score))
 
-        x=int((screen_width/2)-(window_width/2))
-        y=int((screen_height/2)-(window_height/2))
-
         snake=Snake()
         food=Food()
-
         next_turn(snake,food)
         window.mainloop()
+    
 
 
 if __name__=="__main__":
@@ -169,9 +171,9 @@ if __name__=="__main__":
     high_score=0
     score=0
     multiplier=1
+    is_end=False
     is_not_max_level=True
     direction="down"
-    is_end=False
     high_s=Label(window, text="High Score:{}".format(high_score), font=('consolas',20))
     high_s.pack()
 
